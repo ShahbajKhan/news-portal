@@ -40,7 +40,7 @@ const showAllNews = (data, category_name) => {
   const newsContainer = document.getElementById("all-news");
   newsContainer.innerHTML = "";
   data.forEach((singleNews) => {
-    const { _id, image_url, title, details, author, total_view } = singleNews;
+    const { _id, image_url, title, details, author, total_view,rating } = singleNews;
     // newsContainer.innerHTML += ``
     const card = document.createElement("div");
     card.classList.add("card", "mb-3");
@@ -72,9 +72,14 @@ const showAllNews = (data, category_name) => {
         
         <p class="m-0 p-0">${total_view ? total_view : "Not available"}</p>
         </div>
-        <div>
+        <div class="d-flex gap-2">
         <i class="fas fa-star"></i>
-        
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half"></i>
+       
+        <p>${rating.number}</p>
         </div>
         <div>
         
@@ -168,3 +173,18 @@ const showTrending=()=>{
     showAllNews(trendingNews, category_name);
 
 }
+
+// Optional
+// Generate stars
+// ${generateStars(rating.number)}
+// const generateStars= rating =>{
+//     let ratingHTML= '';
+//     for (let i = 1; i <= Math.floor(rating); i++){
+//         ratingHTML +=`<i class="fas fa-star"></i>`;
+      
+//     }
+//     if(rating - Math.floor(rating)>0){
+//         ratingHTML+=`<i class="fas fa-star-half"></i>`
+//     }
+//     return ratingHTML
+// }
