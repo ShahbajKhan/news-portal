@@ -64,14 +64,88 @@
     <!-- mian section starts -->
     <main>
       <!-- Alert section starts-->
-      <section class="container">
+      <section class="container mt-4">
         <div class="alert alert-light" role="alert">
-          <span id="news-count">0</span> items found for category <span id="category-name"></span>
+          <span id="news-count">0</span> items found for category
+          <span id="category-name"></span>
         </div>
       </section>
       <!-- Alert section ends -->
+      <!-- sorting options section -->
+      <section class="container d-flex justify-content-between my-4" id="">
+        <div class="d-flex justify-content-center align-items-center gap-2">
+          <p class="p-0 m-0">Sort By:</p>
 
-      
+          <div>
+            <select
+              class="form-select"
+              id="floatingSelect"
+              aria-label="Floating label select example"
+            >
+              <option selected>Default</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-primary" onclick="showTodaysPick()">Todays pick</button>
+          <button class="btn btn-outline-secondary" onclick="showTrending()">Trending</button>
+        </div>
+      </section>
+      <!-- sorting options section ends -->
+
+      <section class="all-news container mb-4" id="all-news"></section>
+
+      <!-- Modal body goes here -->
+      <!-- Button trigger modal -->
+      <!-- <button
+        type="button"
+        class="btn btn-primary"
+        
+      >
+        Launch demo modal
+      </button> -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal ends -->
     </main>
     <!-- mian section ends -->
 
