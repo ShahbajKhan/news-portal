@@ -13,11 +13,68 @@
       crossorigin="anonymous"
     />
     <!-- Fontawesome CDN goes here -->
-   
-
+    <script
+      src="https://kit.fontawesome.com/ce32527ea4.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body class="" style="background-color: #e3dfdf">
+  <body class="" style="background-color: #e3dfdf" onload="fetchCategories()">
+    <header class="container-fluid m-0 p-0">
+      <!-- Navbar goes here -->
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><button class="btn btn-primary rounded-0">News</button> Portal</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">News</a>
+              <a class="nav-link" href="#">Blogs</a>
+              <a class="nav-link" href="#"
+                ><img src="./assets/Avatar.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr class="container" />
+      <!-- News Categories section starts-->
+      <section
+        class="container categories-container d-flex justify-content-between"
+        id="categories-container"
+      ></section>
+      <!-- News Categories section ends -->
+    </header>
+
+    <!-- mian section starts -->
+    <main>
+      <!-- Alert section starts-->
+      <section class="container">
+        <div class="alert alert-light" role="alert">
+          <span id="news-count">0</span> items found for category <span id="category-name"></span>
+        </div>
+      </section>
+      <!-- Alert section ends -->
+
+      
+    </main>
+    <!-- mian section ends -->
+
     <!-- Bootstrap script goes here -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
